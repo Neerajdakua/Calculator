@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/939581d4d2.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        #bgimg {
+            margin-left: 250px;
+            background-image: url("https://i.pinimg.com/originals/8c/43/64/8c43645fe8d0ac164a6925448be32858.jpg");
+            width: 800px;
+            height: 500px;
+            text-align: center;
+        }
+
+        #op {
+            height: 60px;
+            width: 400px;
+            text-align: right;
+        }
+
+        #panel {
+            height: 60px;
+            width: 400px;
+        }
+
+        .btn-lg {
+            height: 60px;
+            width: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+
+        <h1 style="text-align:center;"><b>Calculator</b></h1>
+
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">History</h1>
+                <button onclick="historyDelete()"><i class="fa-solid fa-trash"></i></button>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body" id="history">
+                <p>There's no history yet</p>
+                <div class="his">
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="bgimg">
+            <div class="container-fluid mt-3">
+                <button class="btn-lg" data-bs-toggle="offcanvas" data-bs-target="#demo" style="margin-right:300px;">H
+                </button>
+            </div>
+
+            <div id="div">
+                <!--First panel-->
+                <input id="panel" style="text-align:right;" disabled type="text" name="Question">
+                <br>
+                <!--second panel-->
+                <input id="op" type="text" name="Answer" value="0">
+            </div>
+
+            <div class="cla-btn" id="div">
+                <button class="btn-lg" onclick="clearAll()"><i class="fa-solid fa-c"></i></button>
+                <button class="btn-lg" onclick="getValue('%')"><i class="fa-solid fa-percent"></i></button>
+                <button class="btn-lg" onclick="onCut()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="btn-lg" onclick="getValue('/')"><i class="fa-solid fa-divide"></i></button>
+                <br>
+                <button class="btn-lg" onclick="getValue('7')">7</button>
+                <button class="btn-lg" onclick="getValue('8')">8</button>
+                <button class="btn-lg" onclick="getValue('9')">9</button>
+                <button class="btn-lg" onclick="getValue('*')"><i class="fa-solid fa-xmark"></i></button>
+                <br>
+                <button class="btn-lg" onclick="getValue('4')">4</button>
+                <button class="btn-lg" onclick="getValue('5')">5</button>
+                <button class="btn-lg" onclick="getValue('6')">6</button>
+                <button class="btn-lg" onclick="getValue('-')"><i class="fa-solid fa-minus"></i></button>
+                <br>
+                <button class="btn-lg" onclick="getValue('1')">1</button>
+                <button class="btn-lg" onclick="getValue('2')">2</button>
+                <button class="btn-lg" onclick="getValue('3')">3</button>
+                <button class="btn-lg" onclick="getValue('+')"><i class="fa-solid fa-plus"></i></button>
+                <br>
+                <button class="btn-lg" onclick="getValue('00')">00</button>
+                <button class="btn-lg" onclick="getValue('0')">0</button>
+                <button class="btn-lg" onclick="getValue('.')">.</button>
+                <button class="btn-lg" onclick="equalsTo()"><i class="fa-solid fa-equals"></i></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="Cal-js.js"></script>
+
+</body>
+
+
+</html>
